@@ -12,8 +12,10 @@ Meteor.methods({
   hello(){
     console.log('build cards');
     resetIndex();
-    while(word = getNextWord() != -1){
-      var entry = getDefinitionFromOED(word);
+    while((word = getNextWord()) != -1){
+      getDefinitionFromOED(word);
+      console.log('next entry');
+      //console.log(entry);
     }
   }
 });

@@ -20,7 +20,8 @@ getDefinitionFromOED = function (word){
     if(err){
       console.log(err);
     } else {
-      console.log(res);
+      JSON.stringify(res, null, 4);
+      return res;
     }
   });
 }
