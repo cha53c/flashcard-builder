@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { HTTP } from 'meteor/http';
+import '/imports/server/dictionary-utils'
 
 Meteor.startup(() => {
   // code to run on server at startup
@@ -35,9 +36,8 @@ function getDefinitionFromOED(){
   });
 }
 
-buildURL = function (url, word){
-  // // TODO: is there a built are way to log params?
-  console.log('params:' + url +' ' + word);
-
-  return url.concat('/'+ word);
-}
+// buildURL = function (url, word){
+//   //  TODO: is there a built are way to log params?
+//   console.log('params:' + url +' ' + word);
+//   return url.concat('/'+ word);
+// }
