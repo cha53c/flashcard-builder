@@ -1,5 +1,6 @@
 import assert from "assert";
 import '/tests/dictionary.test.js'
+import '/tests/word-list-utils.test.js'
 
 describe("flashcard-builder", function () {
   it("package.json has correct name", async function () {

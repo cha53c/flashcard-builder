@@ -5,9 +5,8 @@ buildURL = function (url, word){
   return url.concat('/'+ word);
 }
 
-getDefinitionFromOED = function (){
-
-  var newUrl = buildURL(Meteor.settings.oed.entries_url, 'orca');
+getDefinitionFromOED = function (word){
+  var newUrl = buildURL(Meteor.settings.oed.entries_url, word);
   console.log('newUrl: ' + newUrl);
 
   HTTP.call('GET', newUrl,
