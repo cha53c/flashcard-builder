@@ -18,7 +18,7 @@ function getDefinitionFromOED(){
 
   var newUrl = buildURL(Meteor.settings.oed.entries_url, 'orca');
   console.log('newUrl: ' + newUrl);
-  // 'https://od-api.oxforddictionaries.com:443/api/v1/entries/en/ace'
+
   HTTP.call('GET', newUrl,
   { headers:
     {
@@ -35,7 +35,7 @@ function getDefinitionFromOED(){
   });
 }
 
-function buildURL (url, word){
+buildURL = function (url, word){
   // // TODO: is there a built are way to log params?
   console.log('params:' + url +' ' + word);
 
